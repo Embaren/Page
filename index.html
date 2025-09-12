@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Emile Barbier--Renard, PhD Student in Telecom Paris">
+    <meta name="keywords" content="Emile Barbier--Renard, PhD, Telecom Paris, Publications, Hobbies">
+    <title>Emile Barbier--Renard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header onclick="showSection('home')">
+        <h1>Emile Barbier--Renard</h1>
+        <p data-en="PhD Student in Telecom Paris"
+           data-fr="Doctorant à Télécom Paris"></p>
+    </header>
+        <nav aria-label="Main navigation">
+            <a data-en="About me" data-fr="Qui suis-je ?" href="#bio" class="nav-link" onclick="showSection('bio')" aria-label="About me section"></a>
+            <a data-en="Publications" data-fr="Publications" href="#publications" class="nav-link" onclick="showSection('publications')" aria-label="Publications section"></a>
+            <a data-en="Hobbies" data-fr="Loisirs" href="#hobbies" class="nav-link" onclick="showSection('hobbies')" aria-label="Hobbies section"></a>
+            <a data-en="Contact" data-fr="Contact" href="#contact" class="nav-link" onclick="showSection('contact')" aria-label="Contact section"></a>
+            
+            <div class="language-selector">
+                    <div class="custom-dropdown">
+                        <button class="dropdown-button" onclick="toggleDropdown()">
+                            <img src="resources/flags/en.svg" alt="English" class="flag-icon">
+                        </button>
+                        <div class="dropdown-content" id="language-dropdown">
+                            <a href="#" onclick="changeLanguage('en')">
+                                <img src="resources/flags/en.svg" alt="English" class="flag-icon">
+                            </a>
+                            <a href="#" onclick="changeLanguage('fr')">
+                                <img src="resources/flags/fr.svg" alt="Français" class="flag-icon">
+                            </a>
+            </div>
+    </nav>
+        <section id="home" class="section active">
+            <h2 data-en="Welcome to my homepage"
+                data-fr="Bienvenue sur ma page"></h2>
+            <p data-en="Want to know more about my research topic or personal projects? You are in the right place!"
+               data-fr="Pour en découvrir plus sur mes sujets de recherche ou mes projets personnels, c'est ici !"></p>
+        </section>
+        <section id="bio" class="section">
+            <h2 data-en="About me"
+                data-fr="Qui suis-je ?"></h2>
+            <p data-en="I am a French researcher-in-training currently finishing my PhD in the LTCI lab of Télécom Paris. I came there with a background in image processing and computer science from Télécom Saint-Etienne and Université Jean-Monnet."
+                data-fr="Je suis un jeune apprenti-chercheur terminant so doctorat au laboratoire LTSI de Télécom Paris. Je suis arrivé avec un profil d'ingénieur diplômé en traitement d'image et informatique de Télécom Saint-Etienne et de l'Université Jean-Monnet."></p>
+            <p data-en="Nowadays, I am working on surface reconstruction in SAR imaging under Florence Tupin and Loïc Denis' supervision: you can fin my work in the <a href='#publications' onclick='showSection(`publications`)'>Publications</a> section of this page. In particular, I am exploring the adaptation of new inverse rendering methods to the specific case of SAR images. my interest in "
+                data-fr="Aujourd'hui, je travaille sur la reconstruction de surface en imagerie SAR sous la supervision de Florence Tupin et de Loïc Denis : mes travaux sont trouvables dans la section <a href='#publications' onclick='showSection(`publications`)'>Publications</a> de ce site. En particulier, je m'intéresse à l'adaptation des nouvelles approches de rendu inverse aux cas spécifique des images SAR."></p>
+            <p data-en="But I am also invested in many non-scientific topics, ranging from multi-weekly swing dancing (mainly boogie, rock n' roll, lindy hop) to a long-entertained interest in cinema and History. I also delve regularly in random personal coding project such as Fireworker, a firework show simulator, or MetroLag a city-wide competitive game about teamwork, strategy and cardio using available public transports and assisted by a custom app (approved by beta testers and releasing soon)! You can learn more about those in the <a href='#hobbies' onclick='showSection(`hobbies`)'>Hobbies</a> section."
+                data-fr="Mais je suis également investi dans de nombreux domaines non-scientifiques, allant de la danse swing (boogie, rock n' roll, lindy hop) pluri-hebdomadaire aux intérêts de longues date que sont l'Histoire et le cinéma. Je me lance aussi régulièrement dans le développement de projets personnels comme Fireworker, un simulateur de spectacle de feux d'artifice, ou encore Metrolag, un jeu compétitif à travers toute une ville assisté par une application nécessitant coopération, stratégie et cardio en naviguant le réseau de transports publics. Plus d'infos sur ces sujets dans la section <a href='#hobbies' onclick='showSection(`hobbies`)'>Loisirs</a> !"></p>
+        </section>
+        <section id="publications" class="section">
+            <h2 data-en="Publications" data-fr="Publications"></h2>
+            <a class="orcid" href="https://orcid.org/0000-0003-2967-6082" aria-label="View ORCID record">
+                <img src="/resources/ORCID-iD_icon_vector.svg" alt="ORCID iD"/>
+                0000-0003-2967-6082
+            </a>
+
+            <ul id="publication-list" class="publication-list"></ul>
+        </section>
+        <section id="hobbies" class="section">
+            <h2 data-en="Hobbies" data-fr="Loisirs"></h2>
+            <p data-en="This section will describe the hobbies of Emile Barbier--Renard." data-fr="Cette section décritra les loisirs d'Emile Barbier--Renard."></p>
+        </section>
+        <section id="contact" class="section">
+            <h2 data-en="Contact" data-fr="Contact"></h2>
+            <address>
+                <ul>
+                    <li><a href="mailto:emile.barbier.renard@telecom-paris.fr">emile.barbier.renard@telecom-paris.fr</a></li>
+                    <li><a href="mailto:contact@barbierrenard.fr">contact@barbierrenard.fr</a></li>
+                </ul>
+            </address>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Emile Barbier--Renard</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            const section = document.getElementById(sectionId);
+            section.classList.add('active');
+        }
+
+        function loadPublications() {
+            fetch('resources/bib.bib')
+                .then(response => response.text())
+                .then(data => {
+                    const entries = data.split('@').filter(entry => entry.trim() !== '');
+                    const publicationList = document.getElementById('publication-list');
+
+                    entries.forEach(entry => {
+                        const lines = entry.split('\n').map(line=>line.trim());
+                        const type = lines[0].split('{')[0].trim();
+                        const citationKey = lines[0].split('{')[1].split(',')[0].trim();
+
+                        const title = lines.find(line => line.startsWith('title')).split('=')[1].trim().replace(/[{}]/g, '').replace(/,$/g, '');
+                        const author = lines.find(line => line.startsWith('author')).split('=')[1].trim().replace(/[{}]/g, '').replace(/,$/g, '');
+                        const year = lines.find(line => line.startsWith('year')).split('=')[1].trim().replace(/[{}]/g, '').replace(/,$/g, '');
+                        const journalOrBooktitle = lines.find(line => line.startsWith('journal') || line.includes('booktitle')).split('=')[1].trim().replace(/[{}]/g, '').replace(/,$/g, '');
+                        const pages = lines.find(line => line.startsWith('pages')) ? lines.find(line => line.includes('pages')).split('=')[1].trim().replace(/[{}]/g, '').replace(/,$/g, '') : '';
+                        const doi = lines.find(line => line.startsWith('doi')) ? lines.find(line => line.includes('doi')).split('=')[1].trim().replace(/[{}]/g, '').replace(/,$/g, '') : '';
+                        const abstract = lines.find(line => line.startsWith('abstract')) ? lines.find(line => line.includes('abstract')).split('=')[1].trim().replace(/[{}]/g, '') : '';
+
+                        const publicationItem = document.createElement('li');
+                        publicationItem.className = 'publication-item';
+                        publicationItem.innerHTML =
+                            `
+                            <h3>${title}</h3>
+                            <p class="authors">${author}</p>
+                            <details>
+                                <summary>In ${journalOrBooktitle}, ${year}, pp. ${pages}. DOI: <a href="https://doi.org/${doi}">${doi}</a></summary>
+                                <p>${abstract}</p>
+                            </details>
+                        `;
+                        publicationList.appendChild(publicationItem);
+                    });
+                })
+                .catch(error => console.error('Error loading publications:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPublications);
+
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-en], [data-fr]');
+            elements.forEach(element => {
+                element.innerHTML = element.getAttribute(`data-${language}`);
+            });
+
+            const dropdownButton = document.querySelector('.dropdown-button');
+            const selectedOption = document.querySelector(`#language-dropdown a[onclick="changeLanguage('${language}')"]`);
+            dropdownButton.innerHTML = selectedOption.innerHTML;
+
+            document.getElementById('language-dropdown').style.display = 'none';
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                const dropdowns = document.getElementsByClassName('dropdown-content');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+        changeLanguage('en');
+    </script>
+</body>
+
+</html>

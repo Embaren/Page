@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="300"
+   height="300"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.12687;stroke-dasharray:10.2537, 5.12687;-inkscape-stroke:none"
+     id="rect5-0-9"
+     width="300"
+     height="300"
+     x="0"
+     y="0" />
+  <rect
+     style="fill:#ce1126;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:6, 3;-inkscape-stroke:none"
+     id="rect5"
+     width="100"
+     height="300"
+     x="200"
+     y="0" />
+  <rect
+     style="fill:#002654;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:6, 3;-inkscape-stroke:none"
+     id="rect5-0"
+     width="100"
+     height="300"
+     x="0"
+     y="0" />
+</svg>
